@@ -6,14 +6,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 
         {/* Brand */}
-        <div className="text-center md:text-left">
-          <h1 className="text-xl font-bold text-yellow-400">
-            AFC Namrata’s Kitchen
-          </h1>
-          <p className="text-white/60 text-sm mt-2">
-            Swad bhi. Sehat bhi.
-          </p>
-        </div>
+       <div className="text-center md:text-left">
+  <h1 className="text-xl font-bold text-yellow-400">AFC Namrata's Kitchen</h1>
+  <p className="text-white/60 text-sm mt-1">Swad bhi. Sehat bhi.</p>
+  <p className="text-white/40 text-xs mt-2">🕐 Open: 9:00 AM – 9:00 PM • Meerut, India</p>
+</div>
 
         {/* Links */}
         <div className="flex gap-6 text-sm text-white/70">

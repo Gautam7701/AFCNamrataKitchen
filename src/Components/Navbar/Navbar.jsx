@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  
 
   const navItems = ["home", "about", "menu", "contact"];
 

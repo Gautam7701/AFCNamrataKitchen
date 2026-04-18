@@ -75,39 +75,25 @@ const WhyUs = () => {
 
         {/* 🔥 Feature Cards */}
         <div className="grid md:grid-cols-4 gap-8 mt-16">
-
-          {features.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2 }}
-              whileHover={{ y: -10 }}
-              className="relative bg-white/5 border border-white/10 rounded-2xl p-6 text-center group transition cursor-pointer overflow-hidden"
-            >
-
-              {/* Glow on hover */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-yellow-400/10 transition"></div>
-
-              {/* Icon */}
-              <div className="text-yellow-400 text-3xl mb-4 group-hover:scale-125 transition">
-                {item.icon}
-              </div>
-
-              {/* Title */}
-              <h3 className="text-lg font-semibold text-white group-hover:text-yellow-400 transition">
-                {item.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-sm text-white/70 mt-2">
-                {item.desc}
-              </p>
-
-            </motion.div>
-          ))}
-
-        </div>
+  {features.map((item, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: i * 0.15 }}
+      whileHover={{ y: -8 }}
+      className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center group transition cursor-pointer hover:border-yellow-400/40 hover:bg-yellow-400/5"
+    >
+      <div className="text-yellow-400 text-3xl mb-4 flex justify-center group-hover:scale-125 transition">
+        {item.icon}
+      </div>
+      <h3 className="text-lg font-semibold text-white group-hover:text-yellow-400 transition">
+        {item.title}
+      </h3>
+      <p className="text-sm text-white/70 mt-2">{item.desc}</p>
+    </motion.div>
+  ))}
+</div>
 
       </div>
     </div>

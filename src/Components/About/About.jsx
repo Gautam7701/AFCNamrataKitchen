@@ -7,17 +7,21 @@ const About = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
         {/* LEFT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          className="w-full md:w-1/2"
-        >
-          <img
-            src={aboutImg}
-            alt="About"
-            className="rounded-2xl shadow-xl"
-          />
-        </motion.div>
+       {/* LEFT IMAGE — replace existing motion.div */}
+<motion.div
+  initial={{ opacity: 0, x: -60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  className="w-full md:w-1/2 relative"
+>
+  {/* Decorative glow behind image */}
+  <div className="absolute -inset-3 bg-yellow-400/20 rounded-3xl blur-2xl" />
+  <div className="absolute -inset-1 rounded-2xl border border-yellow-400/30" />
+  <img
+    src={aboutImg}
+    alt="About"
+    className="relative rounded-2xl shadow-2xl w-full object-cover"
+  />
+</motion.div>
 
         {/* RIGHT CONTENT */}
         <motion.div
@@ -48,6 +52,15 @@ const About = () => {
             of comfort, care, and quality.
           </p>
 
+          {/* Add this after the second <p> tag, before the button */}
+<div className="flex gap-8 mt-6 justify-center md:justify-start">
+  {[["1000+", "Happy Customers"], ["50+", "Menu Items"], ["5★", "Rating"]].map(([num, label]) => (
+    <div key={label} className="text-center">
+      <div className="text-yellow-400 text-xl font-bold">{num}</div>
+      <div className="text-white/50 text-xs mt-1">{label}</div>
+    </div>
+  ))}
+</div>
           {/* CTA */}
           <button
             onClick={() =>

@@ -29,35 +29,30 @@ const Gallery = () => {
         </p>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
-
-          {images.map((img, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.1 }}
-              className="relative overflow-hidden rounded-xl group cursor-pointer"
-            >
-
-              {/* Image */}
-              <img
-                src={img}
-                alt="food"
-                className="w-full h-48 md:h-60 object-cover group-hover:scale-110 transition duration-500"
-              />
-
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span className="text-yellow-400 text-lg font-semibold">
-                  View
-                </span>
-              </div>
-
-            </motion.div>
-          ))}
-
-        </div>
+       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
+  {images.map((img, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ delay: i * 0.1 }}
+      className={`relative overflow-hidden rounded-xl group cursor-pointer ${
+        i === 0 ? "col-span-2 md:col-span-1 md:row-span-2" : ""
+      }`}
+    >
+      <img
+        src={img}
+        alt="food"
+        className={`w-full object-cover group-hover:scale-110 transition duration-500 ${
+          i === 0 ? "h-72 md:h-full" : "h-56 md:h-64"
+        }`}
+      />
+      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+        <span className="text-yellow-400 text-lg font-semibold">View</span>
+      </div>
+    </motion.div>
+  ))}
+</div>
       </div>
     </div>
   );

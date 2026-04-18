@@ -54,6 +54,7 @@ import WhyUs from "./Components/WhyUs/WhyUs";
 import Gallery from "./Components/Gallery/Gallery";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Testimonials from "./Components/Testimonials/Testimonials";
 
 function App() {
   return (
@@ -83,7 +84,10 @@ function App() {
       <section id="whyus">
         <WhyUs />
       </section>
-
+      <section id="testimonials">
+        <Testimonials />
+      </section>
+      
       <section id="gallery">
         <Gallery />
       </section>
