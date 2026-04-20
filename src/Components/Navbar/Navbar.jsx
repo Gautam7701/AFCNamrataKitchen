@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import logo from "../../assets/images/logo.jpg";
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
@@ -27,9 +28,20 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
-        <h1 className="text-xl font-bold text-yellow-400 tracking-wide cursor-pointer">
-          AFC Namrata’s Kitchen
-        </h1>
+        <div
+  onClick={() => handleScroll("home")}
+  className="flex items-center gap-3 cursor-pointer"
+>
+  <img
+    src={logo}
+    alt="Logo"
+    className="w-10 h-10 object-contain"
+  />
+
+  <h1 className="text-lg md:text-xl font-bold text-yellow-400 tracking-wide">
+    AFC Namrata’s Kitchen
+  </h1>
+</div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex gap-8 text-sm">

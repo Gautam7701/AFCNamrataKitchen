@@ -1,29 +1,57 @@
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
-import item1 from "../../assets/images/bestseller.jfif";
-import item2 from "../../assets/images/gallery1.jfif";
-import item3 from "../../assets/images/gallery2.jfif";
+import item1 from "../../assets/images/pakoda.png";
+import item2 from "../../assets/images/roll.png";
+import item3 from "../../assets/images/thali.png";
+import item4 from "../../assets/images/sandwich.png";
+import item5 from "../../assets/images/parathe.png";
+import item6 from "../../assets/images/kabab.png";
 
 const phone = "+919837377354";
 
 const items = [
   {
-    name: "Grilled Sandwich",
-    desc: "Crispy outside, loaded inside.",
-    price: "₹80",
+    name: "Crispy Pakodi",
+    desc: "Hot, crunchy fritters served with chutney.",
+    price: "₹70",
+    tag: "🔥 Bestseller",
     img: item1,
   },
   {
-    name: "Healthy Bowl",
-    desc: "Fresh ingredients, balanced taste.",
+    name: "Kathi Roll",
+    desc: "Loaded with spicy filling & wrapped in soft paratha.",
     price: "₹120",
+    tag: "⭐ Popular",
     img: item2,
   },
   {
-    name: "Cheese Delight",
-    desc: "Melty, creamy, irresistible.",
-    price: "₹100",
+    name: "Special Thali",
+    desc: "Complete meal with dal, sabzi, paneer, roti & rice.",
+    price: "₹130",
+    tag: "💛 Must Try",
     img: item3,
+  },
+  {
+    name: "Grilled Sandwich",
+    desc: "Crispy bread filled with cheesy goodness.",
+    price: "₹80",
+    tag: "🔥 Hot",
+    img: item4,
+  },
+  {
+    name: "Stuffed Paratha",
+    desc: "Butter-loaded paratha with authentic flavors.",
+    price: "₹60",
+    tag: "⭐ Favorite",
+    img: item5,
+  },
+  {
+    name: "Veg Kabab",
+    desc: "Smoky, spicy kebabs grilled to perfection.",
+    price: "₹120",
+    tag: "💛 Special",
+    img: item6,
   },
 ];
 
@@ -77,12 +105,15 @@ const BestSeller = () => {
                   {item.desc}
                 </p>
 
-                <button
-                  type="button"
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-yellow-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-yellow-300"
-                >
-                  Order on WhatsApp
-                </button>
+               <a
+  href={`https://wa.me/${phone}?text=Hi%20I%20want%20to%20order%20${item.name}%20from%20AFC%20Namrata's%20Kitchen`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-yellow-400 px-5 py-3 text-sm font-semibold text-black transition hover:bg-yellow-300 hover:scale-[1.02]"
+>
+  <FaWhatsapp className="text-lg" />
+  Order on WhatsApp
+</a>  
               </div>
 
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 transition group-hover:opacity-100" />

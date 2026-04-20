@@ -1,37 +1,43 @@
+
 import { motion } from "framer-motion";
-import aboutImg from "../../assets/images/aboutus.jfif"; // 👉 add a real kitchen / food image
+import aboutImg from "../../assets/images/aboutus.png";
 
 const About = () => {
   return (
-    <div className="min-h-screen px-6 py-16 bg-black">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <div className="min-h-screen px-6 py-20 bg-black">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
 
-        {/* LEFT IMAGE */}
-       {/* LEFT IMAGE — replace existing motion.div */}
-<motion.div
-  initial={{ opacity: 0, x: -60 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  className="w-full md:w-1/2 relative"
->
-  {/* Decorative glow behind image */}
-  <div className="absolute -inset-3 bg-yellow-400/20 rounded-3xl blur-2xl" />
-  <div className="absolute -inset-1 rounded-2xl border border-yellow-400/30" />
-  <img
-    src={aboutImg}
-    alt="About"
-    className="relative rounded-2xl shadow-2xl w-full object-cover"
-  />
-</motion.div>
+        {/* 🔥 LEFT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="w-full md:w-[55%] relative"
+        >
+          {/* Glow */}
+          <div className="absolute -inset-4 bg-yellow-400/20 rounded-3xl blur-2xl" />
+          
+          {/* Border */}
+          <div className="absolute -inset-1 rounded-2xl border border-yellow-400/30" />
 
-        {/* RIGHT CONTENT */}
+          {/* Image */}
+          <img
+            src={aboutImg}
+            alt="About"
+            className="relative w-full h-[420px] md:h-[500px] object-cover rounded-2xl shadow-2xl hover:scale-[1.02] transition duration-500"
+          />
+        </motion.div>
+
+        {/* 🔥 RIGHT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="w-full md:w-1/2 text-center md:text-left"
+          transition={{ duration: 0.6 }}
+          className="w-full md:w-[45%] flex flex-col justify-center max-w-xl text-center md:text-left"
         >
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400">
+          <h2 className="text-3xl md:text-5xl font-bold text-yellow-400 leading-tight">
             About Us
           </h2>
 
@@ -52,15 +58,24 @@ const About = () => {
             of comfort, care, and quality.
           </p>
 
-          {/* Add this after the second <p> tag, before the button */}
-<div className="flex gap-8 mt-6 justify-center md:justify-start">
-  {[["1000+", "Happy Customers"], ["50+", "Menu Items"], ["5★", "Rating"]].map(([num, label]) => (
-    <div key={label} className="text-center">
-      <div className="text-yellow-400 text-xl font-bold">{num}</div>
-      <div className="text-white/50 text-xs mt-1">{label}</div>
-    </div>
-  ))}
-</div>
+          {/* Stats */}
+          <div className="flex gap-8 mt-8 justify-center md:justify-start">
+            {[
+              ["1000+", "Happy Customers"],
+              ["50+", "Menu Items"],
+              ["5★", "Rating"],
+            ].map(([num, label]) => (
+              <div key={label} className="text-center">
+                <div className="text-yellow-400 text-2xl font-bold">
+                  {num}
+                </div>
+                <div className="text-white/50 text-xs mt-1">
+                  {label}
+                </div>
+              </div>
+            ))}
+          </div>
+
           {/* CTA */}
           <button
             onClick={() =>
@@ -68,7 +83,7 @@ const About = () => {
                 .getElementById("menu")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-            className="mt-6 bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition"
+            className="mt-8 w-fit bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition mx-auto md:mx-0"
           >
             Explore Menu
           </button>
