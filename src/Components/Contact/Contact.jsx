@@ -83,44 +83,10 @@ const Contact = () => {
 
         </div>
 
-        {/* 🔥 MINI FORM (Optional but powerful) */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="mt-16 bg-white/5 border border-white/10 rounded-2xl p-8 max-w-3xl mx-auto"
-        >
-          <h3 className="text-xl text-white font-semibold mb-4">
-            Quick Inquiry
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="bg-black/40 border border-white/10 px-4 py-2 rounded text-white outline-none"
-            />
-
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="bg-black/40 border border-white/10 px-4 py-2 rounded text-white outline-none"
-            />
-          </div>
-
-          <textarea
-            placeholder="Your Message"
-            className="w-full mt-4 bg-black/40 border border-white/10 px-4 py-2 rounded text-white outline-none"
-          ></textarea>
-
-          <button className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
-            Send Message
-          </button>
-        </motion.div> */}
-
         {/* CTA */}
         <div className="mt-12">
           <p className="text-white/70 mb-4">
-            Craving something delicious right now?
+            Your next meal is just one click away
           </p>
 
           <a

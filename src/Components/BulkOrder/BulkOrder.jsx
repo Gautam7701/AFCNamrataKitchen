@@ -4,7 +4,7 @@ const locations = ["Noida", "Delhi", "Ghaziabad"];
 
 const DeliveryAreas = () => {
   return (
-    <div className="px-6 py-20 bg-slate-950">
+    <div className="px-6 py-20 bg-black/30">
       <div className="max-w-6xl mx-auto text-center">
         
         <motion.h2

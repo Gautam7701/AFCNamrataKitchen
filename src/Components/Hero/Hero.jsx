@@ -42,7 +42,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-block bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 px-4 py-1 rounded-full text-sm mb-6 w-fit"
+          className="inline-block bg-yellow-400/10 border border-yellow-400/30 text-yellow-400 px-4 py-1 rounded-full text-sm mt-6 w-fit"
         >
           Fresh • Hygienic • Homemade
         </motion.div>
@@ -65,7 +65,20 @@ const Hero = () => {
         >
           Swad bhi. Sehat bhi.
         </motion.p>
+        <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.25 }}
+  className="flex flex-wrap items-center gap-3 mt-4"
+>
+  <span className="bg-white/10 border border-white/20 text-white/80 px-4 py-1 rounded-full text-md backdrop-blur-sm">
+    🕐 9:00 AM – 9:00 PM
+  </span>
 
+  <span className="bg-white/10 border border-white/20 text-white/80 px-4 py-1 rounded-full text-sm backdrop-blur-sm">
+    📍 Meerut
+  </span>
+</motion.div>
         <motion.p
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

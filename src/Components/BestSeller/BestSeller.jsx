@@ -57,7 +57,7 @@ const items = [
 
 const BestSeller = () => {
   return (
-    <div className="min-h-screen px-6 py-16 bg-slate-950">
+    <div className="min-h-screen px-6 py-16 bg-black/30">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
