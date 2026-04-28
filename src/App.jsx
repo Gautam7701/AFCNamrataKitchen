@@ -55,6 +55,7 @@ import Gallery from "./Components/Gallery/Gallery";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Testimonials from "./Components/Testimonials/Testimonials";
+import BulkOrder from "./Components/BulkOrder/BulkOrder";
 
 function App() {
   return (
@@ -93,8 +94,12 @@ function App() {
       </section>
 
       <section id="contact">
+        <BulkOrder />
+      </section>
+      <section id="contact">
         <Contact />
       </section>
+
 
       {/* Footer */}
       <Footer />

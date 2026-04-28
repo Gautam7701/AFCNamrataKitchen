@@ -2,10 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import logo from "../../assets/images/logo.jpg";
 
+
 const Navbar = () => {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-  
 
   const navItems = ["home", "about", "menu", "contact"];
 
@@ -35,7 +35,7 @@ const Navbar = () => {
   <img
     src={logo}
     alt="Logo"
-    className="w-10 h-10 object-contain"
+    className="h-12 md:h-14 object-contain"
   />
 
   <h1 className="text-lg md:text-xl font-bold text-yellow-400 tracking-wide">

@@ -5,6 +5,11 @@ const reviews = [
   { name: "Priya S.", text: "Best grilled sandwich in Meerut! Super fresh and hygienic. Order kiya aur dil khush ho gaya.", stars: 5 },
   { name: "Rahul M.", text: "Namrata ji ka khana ghar jaisa lagta hai. Healthy bowl is my daily go-to!", stars: 5 },
   { name: "Sunita K.", text: "Amazing food, fast delivery, and the cheese delight is absolutely heavenly. Highly recommend!", stars: 5 },
+  { name: "Ayush G.", text: "Ordered thali from the website — quality was really good and quantity was perfect. Worth it.", stars: 5 },
+  { name: "Gautam K.", text: "Packaging was neat and food tasted fresh. Felt like proper homemade, not like outside food.", stars: 5 },
+  { name: "Deepak S.", text: "Paneer curry was really tasty and not too oily. Will definitely order again.", stars: 5 },
+  { name: "Ashwani R.", text: "Tried for the first time and honestly liked the taste. Simple, clean and satisfying meal.", stars: 5 },
+  { name: "Rohit V.", text: "Delivery was a bit late but food quality made up for it. Tasted really fresh.", stars: 4 },
 ];
 
 const Testimonials = () => {

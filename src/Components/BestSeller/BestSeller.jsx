@@ -15,7 +15,7 @@ const items = [
     name: "Crispy Pakodi",
     desc: "Hot, crunchy fritters served with chutney.",
     price: "₹70",
-    tag: "🔥 Bestseller",
+    tag: "🔥 Crowd Favorite",
     img: item1,
   },
   {
@@ -65,11 +65,11 @@ const BestSeller = () => {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-yellow-400"
         >
-          Best Sellers
+          Most Loved Dishes
         </motion.h2>
 
         <p className="text-white/70 mt-4 max-w-2xl mx-auto">
-          Loved by everyone, made with care 💛 Browse our most popular dishes and order fresh in minutes.
+          Loved by our customers, made with care 💛 Browse our most popular dishes and order fresh in minutes.
         </p>
 
         <div className="grid gap-8 mt-12 md:grid-cols-3">
