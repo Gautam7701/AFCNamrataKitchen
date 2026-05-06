@@ -4,9 +4,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import img1 from "../../assets/images/11.png";
+import img1 from "../../assets/images/herobanner1.png";
 import img2 from "../../assets/images/222.png";
-import img3 from "../../assets/images/1.png";
+import img3 from "../../assets/images/herobanner.png";
 
 const images = [img1, img2, img3];
 

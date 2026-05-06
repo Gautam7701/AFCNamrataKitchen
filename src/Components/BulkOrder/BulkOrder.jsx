@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const locations = ["Noida", "Delhi", "Ghaziabad"];
+const locations = ["Noida", "Delhi", "Ghaziabad","Meerut"];
 
 const DeliveryAreas = () => {
   return (
